@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { SharedModule } from '../../app/shared.module';
 import { IonicPageModule } from 'ionic-angular';
 import { GuidelinesPage } from './guidelines';
 
@@ -8,6 +9,10 @@ import { GuidelinesPage } from './guidelines';
   ],
   imports: [
     IonicPageModule.forChild(GuidelinesPage),
+    SharedModule
   ],
+  exports: [
+    GuidelinesPage
+  ]
 })
 export class GuidelinesPageModule {}

@@ -4,139 +4,163 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
+<ion-header class="arjuna-header">
   <ion-navbar>
-    <ion-title>home</ion-title>
+    <ion-title>
+      <img src="assets/imgs/arjuna_logo.png">
+      <p style="font-size: 0.4em; float: right;"><i>Culture of Excellence & Ethics <br> With the Spirit of Selfless Service</i></p>
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content no-padding class="card-background-page">
-	  <ion-grid no-padding>
-  <ion-row align-items-end>
-    <ion-col col-12 col-sm-6>
-      <ion-card>
-        <ion-list>
-          <ion-list-header >
-            <ion-list>
-              <ion-item class="leaderboard-header">
-           <ion-avatar item-left>
-              <img src="assets/imgs/leaderboard.png">
-            </ion-avatar>  LEADERBOARD 
-          </ion-item> 
-          </ion-list>
-          </ion-list-header>
-          <ion-item class="leaderboard-list">
-            <ion-avatar item-start>
-              <img src="assets/imgs/leaderboard-rank.png">
-            </ion-avatar>
-            <h2 item-left> 1</h2 ><h2 item-left>  Srichand pr  </h2> <h2 item-right> 5000</h2>
-          </ion-item>
-          <ion-item class="leaderboard-list">
-            <ion-avatar item-start>
-              <img src="assets/imgs/leaderboard-rank.png">
-            </ion-avatar>
-            <h2 item-left> 2</h2 ><h2 item-left>  Hari pr  </h2> <h2 item-right> 4000</h2>
-          </ion-item>
-          <ion-item class="leaderboard-list">
-            <ion-avatar item-start>
-              <img src="assets/imgs/leaderboard-rank.png">
-            </ion-avatar>
-            <h2 item-left> 3</h2 ><h2 item-left>  HG Ranjan Nimai pr  </h2> <h2 item-right> 3000</h2>
-          </ion-item>
-      </ion-list>
-      <button ion-button clear >View More</button>
-      </ion-card> 
-    </ion-col>
-    <ion-col col-12 col-sm-6  align-self-end>
-      <ion-card>
-        <ion-list>
-          <ion-list-header >
-            <ion-list>
-              <ion-item class="leaderboard-header">
-           <ion-avatar item-left>
-              <img src="assets/imgs/user-summary.png">
-            </ion-avatar>  USER SUMMARY
-          </ion-item> 
-          </ion-list>
-          </ion-list-header>
-          <ion-item>
-          <ion-avatar item-end>
-            <img src="assets/imgs/profile.png">
-          </ion-avatar>
-          <h2>Sucaru Murari Pr</h2>
-          <p><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon> 1345</p>
+  <!-- Menu -->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 col-sm-4 col-md-4>
+        <ion-item	(click)="openItem('LearningPathPage')" class="menu-item">
+          <div class="card-icon"><img src="assets/imgs/learning path.png"> </div>
+          <div class="card-title">Learning <br> Path</div>
         </ion-item>
-        <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/leaderboard-rank.png">
-        </ion-thumbnail>
-        <h2>RANKER</h2>
-        <p>Achievement</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-      <ion-item>
-      </ion-item>
-        </ion-list>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+      </ion-col>
+
+      <ion-col col-4 col-md-4 col-sm-4>
+        <ion-item	(click)="openItem('ForumPage')" class="menu-item">
+          <div class="card-icon"><img src="assets/imgs/forum.png"> </div>
+          <div class="card-title"> <br> Forums</div>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-4 col-md-4 col-sm-4>
+        <ion-item (click)="openItem('PracticalApplicationPage')" class="menu-item">
+          <div class="card-icon"><img src="assets/imgs/practical application.png"> </div>
+          <div class="card-title">Practical <br> Application</div>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-4 col-md-4 col-sm-4>
+        <ion-item	(click)="openItem('GuidelinesPage')" class="menu-item">
+          <div class="card-icon"><img src="assets/imgs/guidelines.png"> </div>
+          <div class="card-title"> <br> Guidelines</div>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-4 col-md-4 col-sm-4>
+        <ion-item	(click)="openItem('ProfilePage')" class="menu-item">
+          <div class="card-icon"><img src="assets/imgs/profile.png"> </div>
+          <div class="card-title"> <br> Profile</div>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-4 col-md-4 col-sm-4>
+        <ion-item	(click)="openItem('FeedbackPage')" class="menu-item">
+          <div class="card-icon"><img src="assets/imgs/feedback.png"> </div>
+          <div class="card-title"> <br> Feedback</div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Leaderboard and User Summary -->
+  <ion-grid>
+    <ion-card>
+      <ion-toolbar no-border-bottom>
+          <p *ngIf="cardType == 'leaderboard'">
+            <ion-list>
+              <ion-list-header>
+                <ion-list>
+                  <ion-item class="leaderboard-header">
+                    <ion-avatar item-left>
+                      <img src="assets/imgs/leaderboard.png" style="background: #0cebeb;">
+                    </ion-avatar>  LEADERBOARD
+                  </ion-item>
+                </ion-list>
+              </ion-list-header>
+
+              <ion-item class="leaderboard-list">
+                <ion-avatar item-start>
+                  <img src="assets/imgs/leaderboard-rank.png">
+                </ion-avatar>
+                <h2 item-left> 1</h2 ><h2 item-left style="margin-left:2em;">  Srichand Pr  </h2> <h2 item-right> 5000</h2>
+              </ion-item>
+
+              <ion-item class="leaderboard-list">
+                <ion-avatar item-start>
+                  <img src="assets/imgs/leaderboard-rank.png">
+                </ion-avatar>
+                <h2 item-left> 2</h2 ><h2 item-left style="margin-left:2em;">  Hari Pr  </h2> <h2 item-right> 4000</h2>
+              </ion-item>
+
+              <ion-item class="leaderboard-list">
+                <ion-avatar item-start>
+                  <img src="assets/imgs/leaderboard-rank.png">
+                </ion-avatar>
+                <h2 item-left> 3</h2 ><h2 item-left style="margin-left:2em;">  HGRNP  </h2> <h2 item-right> 3000</h2>
+              </ion-item>
+            </ion-list>
+            <button ion-button clear style="max-height: 30px; border: 1px solid #ddd; border-radius: 5px;">View More</button>
+          </p>
+          <p *ngIf="cardType == 'usersummary'">
+            <ion-list>
+              <ion-list-header >
+                <ion-list>
+                  <ion-item class="leaderboard-header">
+                    <ion-avatar item-left>
+                      <img src="assets/imgs/user-summary.png">
+                    </ion-avatar>  USER SUMMARY
+                  </ion-item>
+                </ion-list>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-avatar item-end>
+                  <img src="assets/imgs/black-icons/profile.png">
+                </ion-avatar>
+                <h2>Shashank Pr</h2>
+                <p><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon> 1345</p>
+              </ion-item>
+
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="assets/imgs/leaderboard-rank.png">
+                </ion-thumbnail>
+                <h2>RANKER</h2>
+                <p>Achievement</p>
+                <button ion-button clear item-end>View</button>
+              </ion-item>
+
+            </ion-list>
+          </p>
+      </ion-toolbar>
+      <ion-toolbar no-border-bottom style="border-top: 1px solid #ddd;">
+        <ion-segment [(ngModel)]="cardType" color="danger">
+          <ion-segment-button value="leaderboard" style="font-size: 1.3em;">
+            LEADERBOARD
+          </ion-segment-button>
+          <ion-segment-button value="usersummary" style="font-size: 1.3em;">
+            USER SUMMARY
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-card>
   </ion-grid>
 
   <ion-grid>
-  <ion-row>
-  	
-    <ion-col col-6 col-sm-6 col-md-4>
-    	<ion-card	(click)="openItem('LearningPathPage')">
-    	
-      <img src="assets/imgs/bg.png"/>
-      <div class="card-icon"><img src="assets/imgs/learning path.png"> </div>
-      <div class="card-title">Learning Path</div>
-      <!-- <div class="card-subtitle">64 Listings</div> -->
-    	
-    </ion-card>
+    <ion-row>
+      <ion-item	(click)="openItem('AboutArjunaPage')" class="about-arjuna">
+        <div class="card-title"> About Arjuna</div>
+      </ion-item>
+    </ion-row>
+    <ion-item style="max-height: 5px;"></ion-item>
+  </ion-grid>
 
-	</ion-col>
-	
-     <ion-col col-6 col-md-4 col-sm-6>
-     	<ion-card	(click)="openItem('ForumPage')">
-      <img src="assets/imgs/bg.png"/>
-       <div class="card-icon"><img src="assets/imgs/forum.svg"> </div>
-      <div class="card-title">Forums</div>
-      
-    </ion-card></ion-col>
-    <ion-col col-6 col-md-4 col-sm-6>
-    	<ion-card (click)="openItem('PracticalApplicationPage')">
-      <img src="assets/imgs/bg.png"/>
-       <div class="card-icon"><img src="assets/imgs/practical application.png"> </div>
-      <div class="card-title">Practical Application</div>
-    </ion-card></ion-col>
-  
-   
-    <ion-col col-6 col-md-4 col-sm-6>
-    	<ion-card	(click)="openItem('GuidelinesPage')">
-      <img src="assets/imgs/bg.png"/>
-      <div class="card-icon"><img src="assets/imgs/guidelines.png"> </div>
-      <div class="card-title">Guidelines</div>
-      <!-- <div class="card-subtitle">64 Listings</div> -->
-    </ion-card></ion-col>
-     <ion-col col-6 col-md-4 col-sm-6>
-     	<ion-card	(click)="openItem('ProfilePage')">
-      <img src="assets/imgs/bg.png"/>
-       <div class="card-icon"><img src="assets/imgs/profile.png"> </div>
-      <div class="card-title">Profile</div>
-      
-    </ion-card></ion-col>
-    <ion-col col-6 col-md-4 col-sm-6>
-    	<ion-card 	(click)="openItem('FeedbackPage')">
-      <img src="assets/imgs/bg.png"/>
-       <div class="card-icon"><img src="assets/imgs/feedback.png"> </div>
-      <div class="card-title">Feedback</div>
-    </ion-card></ion-col>
-  </ion-row>
-   
-</ion-grid>
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-item style="background: #000;">
+    <ion-title style="margin: 0px;">
+      <p style="font-size: 0.5em; float: left; color: white;"><i>&copy;Arjuna Group Trust</i></p>
+      <p style="font-size: 0.5em; float: right; color: white;"><i>www.studentthinkbox.com</i></p>
+    </ion-title>
+  </ion-item>
+
+  <!--button ion-button secondary menuToggle>Toggle Menu</button-->
 </ion-content>

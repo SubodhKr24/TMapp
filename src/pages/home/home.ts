@@ -14,10 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
+  cardType: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-
+      this.cardType = 'usersummary';
   }
 
   ionViewDidLoad() {

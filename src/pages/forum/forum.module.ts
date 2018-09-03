@@ -9,5 +9,8 @@ import { ForumPage } from './forum';
   imports: [
     IonicPageModule.forChild(ForumPage),
   ],
+  exports: [
+    ForumPage
+  ]
 })
 export class ForumPageModule {}

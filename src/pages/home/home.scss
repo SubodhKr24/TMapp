@@ -1,10 +1,16 @@
-
-
-
 page-home {
 
 }
 
+.arjuna-header {
+  ion-title img {
+    float: left;
+    max-width:80px;
+    max-height:30px;
+    width: auto;
+    height: auto;
+  }
+}
 
 .card-background-page {
 
@@ -14,35 +20,62 @@ page-home {
     cursor:pointer;
   }
 
+  .menu-item {
+    background: #159957; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 5px 15px 5px 15px;
+  }
+
   .card-title {
-    position: absolute;
+    position: relative;
     top: 60%;
-    font-size: 0.5.0em;
+    font-size: 0.6em;
     width: 100%;
     font-weight: bold;
     color: #fff;
-  }
-
-  .card-subtitle {
-    font-size: 0.4.0em;
-    position: absolute;
-    top: 78%;
-    width: 100%;
-    color: #fff;
+    text-align: center;
   }
 
   .card-icon {
-  	position:absolute;
-  	width:25%;
-  	top:15%;
-  	left:37.5%;
+  	position: relative;
+  	width:50%;
+  	left: 25%;
+    height: 100%;
+  }
 
+  .about-arjuna {
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px 0px 20px 0px;
+    width: 50%;
+    left: 25%;
+    font-size: 2em;
   }
 
   .leaderboard-header {
-  background-color: #2076f8;
+    background: #06beb6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
-  
-}
+  .ion-list-header {
+    padding: 0px !important;
+  }
 
+  .leaderboard-list {
+    max-height: 20px !important;
+    border-bottom: 1px solid #eee;
+  }
+
+  .leaderboard-list img {
+    max-height:25px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+  }
+
+}

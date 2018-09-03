@@ -1,3 +1,114 @@
 page-learning-path {
 
 }
+
+.card-learning-path-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .chapter-number {
+    background: #00008B;
+    height: auto;
+    width: 100%;
+  }
+
+  .chapter-number p {
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+
+  .chapter-list-odd {
+    background: #159957; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 0px 50px 5px 0px;
+  }
+
+  .chapter-list-even {
+    background: #159957; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #159957, #155799); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 50px 0px 0px 5px;
+  }
+
+  .chapter-list-odd img {
+    position: relative;
+  	width:50%;
+  	height: 40px;
+    max-width: 40px;
+    float: right;
+    display: inline-block;
+    right: 10px;
+  }
+
+  .chapter-list-even img {
+    position: relative;
+  	width:50%;
+  	left: 10%;
+    height: 40px;
+    max-width: 40px;
+    float: left;
+  }
+
+  .chapter-list-odd b {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    float: left;
+    left: 25px;
+  }
+
+  .chapter-list-even b {
+    position: relative;
+    font-size: 1em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    left: 10px;
+    text-align: center;
+    display: block;
+  }
+
+  .about-arjuna {
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px 0px 20px 0px;
+    width: 50%;
+    left: 25%;
+    font-size: 2em;
+  }
+
+  .leaderboard-header {
+    background: #06beb6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .ion-list-header {
+    padding: 0px !important;
+  }
+
+  .leaderboard-list {
+    max-height: 20px !important;
+    border-bottom: 1px solid #eee;
+  }
+
+  .leaderboard-list img {
+    max-height:25px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+  }
+
+}
